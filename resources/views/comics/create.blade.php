@@ -29,6 +29,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="price" class="form-label">Data di uscita</label>
+                <input type="text" class="form-control" name="sale_date" id="sale_date">
+            </div>
+
+            <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
                 <textarea class="form-control" name="description" id="description" style="height: 100px"></textarea>
             </div>
