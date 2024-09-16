@@ -11,6 +11,7 @@
                 <a class="nav-link" href="{{ route('about') }}">Chi siamo</a>
                 <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
                 <a class="nav-link" href="{{ route('comics.index') }}">Fumetti</a>
+                <a class="nav-link" href="{{ route('comics.create') }}">Nuovo Fumetto</a>
             </div>
         </div>
     </div>
