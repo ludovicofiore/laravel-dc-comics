@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <h3 class="card-title">{{ $comic->title }}</h3>
                     <h5>{{ $comic->price }}</h5>
-                    <a href="#" class="btn btn-primary">Dettagli</a>
+                    <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">Dettagli</a>
                 </div>
             </div>
         @endforeach
