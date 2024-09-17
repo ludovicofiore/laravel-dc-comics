@@ -42,3 +42,8 @@
         </form>
     </div>
 @endsection
+
+
+@section('titlePage')
+    nuovo fumetto
+@endsection

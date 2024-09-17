@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Comic;
+use Illuminate\Support\Str;
+use App\Functions\Helper;
 
 class ComicsTableSeeder extends Seeder
 {
@@ -19,6 +21,9 @@ class ComicsTableSeeder extends Seeder
         foreach ($comics as $comic) {
             $new_comic= new Comic();
             $new_comic->title = $comic['title'];
+
+            $new_comic->slug = Helper::generateSlug($new_comic->title, Comic::class);
+
             $new_comic->description = $comic['description'];
             $new_comic->thumb = $comic['thumb'];
             $new_comic->price = $comic['price'];

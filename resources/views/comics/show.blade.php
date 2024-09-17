@@ -39,3 +39,8 @@
         <a class="btn btn-primary" href="{{ route('comics.index') }}">Torna indietro</a>
     </div>
 @endsection
+
+
+@section('titlePage')
+    dettaglio fumetto
+@endsection

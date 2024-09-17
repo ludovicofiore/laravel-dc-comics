@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use App\Functions\Helper;
 
 class ComicsController extends Controller
 {
@@ -41,7 +42,7 @@ class ComicsController extends Controller
         // $new_comic->sale_date = $data['sale_date'];
         // $new_comic->type = $data['type'];
 
-
+        $data['slug'] = Helper::generateSlug($data['title'], Comic::class);
         $new_comic->fill($data);
         $new_comic->save();
 
