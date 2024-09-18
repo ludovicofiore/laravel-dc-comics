@@ -33,6 +33,18 @@ class ComicsController extends Controller
     {
         $data= $request->all();
 
+
+        // condizioni di vlidazione
+        $request->validate([
+            'title'=>'required|min:3|max:100',
+            'description'=>'required',
+            'thumb'=>'required|min:3|max:255',
+            'price'=>'required|min:1|max:10',
+            'series'=>'required|min:3|max:100',
+            'sale_date'=>'required|date',
+            'type'=>'required|min:3|max:50'
+        ]);
+
         $new_comic= new Comic();
         // $new_comic->title = $data['title'];
         // $new_comic->thumb = $data['thumb'];
@@ -45,7 +57,6 @@ class ComicsController extends Controller
         $data['slug'] = Helper::generateSlug($data['title'], Comic::class);
         $new_comic->fill($data);
         $new_comic->save();
-
 
         return redirect()->route('comics.show', $new_comic->id);
 
