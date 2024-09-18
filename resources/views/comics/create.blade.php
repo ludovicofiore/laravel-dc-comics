@@ -60,8 +60,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="price" class="form-label">Data di uscita (AAAA-MM-GG)</label>
-                <input type="text" class="form-control @error('sale_date') is-invalid @enderror" name="sale_date"
+                <label for="sale_date" class="form-label">Data di uscita (AAAA-MM-GG)</label>
+                <input type="date" class="form-control @error('sale_date') is-invalid @enderror" name="sale_date"
                     id="sale_date" value="{{ old('sale_date') }}">
                 @error('sale_date')
                     <small class="text-danger">{{ $message }}</small>

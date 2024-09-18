@@ -7,7 +7,7 @@ use App\Models\Comic;
 use App\Functions\Helper;
 use App\Http\Requests\ComicRequest;
 
-class ComicsController extends Controller
+class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.

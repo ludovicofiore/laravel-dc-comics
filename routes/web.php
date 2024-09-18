@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\ComicsController;
+use App\Http\Controllers\ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +20,4 @@ Route::get('/chi-siamo',[PageController::class,'about'])->name('about');
 Route::get('/contatti',[PageController::class,'contacts'])->name('contacts');
 
 // route per resource controller
-Route::resource('comics', ComicsController::class);
+Route::resource('comics', ComicController::class);
