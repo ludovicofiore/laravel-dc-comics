@@ -91,6 +91,11 @@ class ComicsController extends Controller
     {
         $comics= Comic::find($id);
 
+        // controllo per pagina non esistente
+        if(!isset($comics)){
+            abort(404);
+        }
+
         return view('comics.show', compact('comics'));
     }
 
